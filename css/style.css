@@ -2,7 +2,9 @@
 * {
 	box-sizing: border-box;
 }
-
+*:focus {
+	outline: none;
+}
 body {
 	margin: 0;
 	background-color: #fff;
@@ -170,6 +172,12 @@ blockquote span,
 	padding: 7px 15px;
 	font-size: 11px;
 }
+.icon {
+	font-size: 48px;
+	color: #111;
+	margin-bottom: 35px;
+}
+
 /* ===== Default components start ===== */
 /* ===== Custom styles start ======*/
 /* ---Inner start--- */
@@ -206,6 +214,9 @@ blockquote span,
 }
 /* ---Inner end--- */
 /* ---About studio start */
+.default-section.about-studio {
+	border-bottom: 1px solid rgba(236, 236, 236, 0.08);
+}
 .team-wrapper {
 	overflow: hidden;
 	width: 100%;
@@ -240,8 +251,29 @@ blockquote span,
 .team-item-role {
 	font-size: 12px;
 }
-/* ---About studio end--- */
-/* ---Why choose us--- *
+/* ---About studio end --- */
+
+/* ---Services start ---*/
+
+#tabs .tabs-nav {
+	margin-bottom: 80px;
+	overflow: hidden;
+}
+#tabs .tabs-nav li {
+	float: left;
+	width: 20%;
+	text-align: center;
+}
+#tabs .tabs-nav li span {
+	display: block;
+}
+#tabs .tabs-nav li a {
+	line-height: 1;
+}
+
+/* ---Services end ---*/
+
+/* ---Why choose us--- */
 .why-choose-us .row + .row {
 	margin-top: 85px;
 }
@@ -252,9 +284,8 @@ blockquote span,
 	font-size: 14px;
 	letter-spacing: .4em;
 	font-weight: 400;
-	margin: 15px 0;
+	margin-bottom: 15px;
 }
-
-
+/* ---Why choose us end--- */
 
 /* ===== Custom styles end ======*/
