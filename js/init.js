@@ -1,4 +1,6 @@
 $( function() {
     // Tabs init
-    $( "#tabs" ).tabs();
+    $( "#tabs-services" ).tabs();
+    $( "#tabs-portfolio" ).tabs();
   } );
+  

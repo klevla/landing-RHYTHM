@@ -217,11 +217,11 @@ blockquote span,
 .default-section.about-studio {
 	border-bottom: 1px solid rgba(236, 236, 236, 0.08);
 }
-.team-wrapper {
+/* .team-wrapper {
 	overflow: hidden;
 	width: 100%;
 	margin-top: 125px;
-}
+} */
 .team-item .team-item-img {
 	position: relative;
 }
@@ -255,23 +255,60 @@ blockquote span,
 
 /* ---Services start ---*/
 
-#tabs .tabs-nav {
+#tabs-services .tabs-nav {
 	margin-bottom: 80px;
+	padding-top: 45px;
 	overflow: hidden;
 }
-#tabs .tabs-nav li {
+#tabs-services .tabs-nav li {
 	float: left;
 	width: 20%;
 	text-align: center;
 }
-#tabs .tabs-nav li span {
+#tabs-services .tabs-nav li span {
 	display: block;
-}
-#tabs .tabs-nav li a {
 	line-height: 1;
+	color: rgba(17, 17, 17, .5);
+}
+#tabs-services .tabs-nav li:active .ui-state-active {
+	color: rgb(17, 17, 17);
 }
 
 /* ---Services end ---*/
+
+/* ---Portfolio start */
+.tabs-wrapper {
+	overflow: hidden;
+}
+.portfolio .portfolio-info p, .tabs-nav {
+	max-width: 760px;
+	margin: auto;
+}
+#tabs-portfolio .tabs-nav li {
+	float: left;
+	text-align: center;
+	width: 25%;
+	margin-top: 85px;
+	margin-bottom: 50px;
+}
+#tabs-portfolio .tabs-nav li span{
+	font-size: 13px;
+	letter-spacing: .4em;
+}
+#tabs-portfolio .portfolio-item {
+	float: left;
+	width: 33.333333%;
+	padding: 4px;
+}
+#tabs-portfolio .portfolio-item img {
+	width: 100%;
+	filter: grayscale(100%);
+}
+#tabs-portfolio .portfolio-item img:hover {
+	filter: grayscale(0);
+}
+
+/* ---Portfolio end */
 
 /* ---Why choose us--- */
 .why-choose-us .row + .row {
