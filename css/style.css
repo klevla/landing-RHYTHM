@@ -270,30 +270,48 @@ blockquote span,
 	line-height: 1;
 	color: rgba(17, 17, 17, .5);
 }
-#tabs-services .tabs-nav li:active .ui-state-active {
+#tabs-services .tabs-nav .ui-state-active span {
 	color: rgb(17, 17, 17);
 }
-
 /* ---Services end ---*/
-
+/* ---Lets-talk start--- */
+.lets-talk-content {
+	padding: 140px 0;
+}
+.lets-talk-content p {
+	color: rgba(255, 255, 255, .7);
+	margin-bottom: 35px;
+}
+.lets-talk .lets-talk-img {
+	margin-top: -33px;
+}
+/* ---Lets-talk end--- */
 /* ---Portfolio start */
+.portfolio.default-section {
+	padding-bottom: 0;
+}
 .tabs-wrapper {
 	overflow: hidden;
 }
-.portfolio .portfolio-info p, .tabs-nav {
+.portfolio .portfolio-info p {
 	max-width: 760px;
 	margin: auto;
+	color: #777;
 }
 #tabs-portfolio .tabs-nav li {
 	float: left;
-	text-align: center;
 	width: 25%;
 	margin-top: 85px;
 	margin-bottom: 50px;
+	text-align: center;
 }
-#tabs-portfolio .tabs-nav li span{
+#tabs-portfolio .tabs-nav li span {
 	font-size: 13px;
 	letter-spacing: .4em;
+	color: rgba(17, 17, 17, .5);
+}
+#tabs-portfolio .tabs-nav .ui-state-active span {
+	color: rgb(17, 17, 17);
 }
 #tabs-portfolio .portfolio-item {
 	float: left;
@@ -309,6 +327,16 @@ blockquote span,
 }
 
 /* ---Portfolio end */
+/* ---Like-works starts --- */
+.like-works {
+	background-image: url('../img/like-us-bg.jpg');
+	height: 219px;
+}
+.like-works .title.section-title-light {
+	padding-top: 55px;
+	margin-bottom: 25px; 
+}
+/* ---Like-works end --- */
 
 /* ---Why choose us--- */
 .why-choose-us .row + .row {
@@ -324,5 +352,6 @@ blockquote span,
 	margin-bottom: 15px;
 }
 /* ---Why choose us end--- */
-
+/* ---Latest news start---- */
+/* ---Latest news end---- */
 /* ===== Custom styles end ======*/
