@@ -64,6 +64,11 @@ blockquote {
 .bg-grey {
 	background: color #f8f8f8;
 }
+.m-auto {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
 /* ===== Default classes end ===== */
 
 /* ===== Default components start ===== */
@@ -177,8 +182,61 @@ blockquote span,
 	color: #111;
 	margin-bottom: 35px;
 }
-
-/* ===== Default components start ===== */
+.rhomb-icon {
+	display: inline-block;
+	width: 23px;
+	height: 23px;
+	text-align: center;
+	line-height: 23px;
+	border-radius: 2px;
+	font-size: 14px;
+	transform: rotate(45deg);
+}
+.rhomb-icon.black-icon {
+	color: #fff;
+	background-color: #111;
+}	
+.rhomb-icon.transparent-icon {
+	background-color: transparent;
+}
+.rhomb-icon i {
+	transform: rotate(-45deg);
+}
+.footer {
+	background-color: #f8f8f8;
+	padding-bottom: 60px;
+}
+.footer .footer-logo { 
+	color: #282828;
+	padding: 5px 0;
+	margin-bottom: 11px;
+}
+.footer .rhomb-icon {
+	border: 1px solid #000;
+	margin: 9px;
+}
+.footer .rhomb-icon i {
+	color: #111; 
+}
+.footer .footer-info {
+	margin-top: 80px;
+}
+.footer .footer-info span {
+	display: block;
+}
+.footer .footer-info .footer-copy {
+	font-weight: 400;
+	font-size: 12px;
+	letter-spacing: 0.5em;
+	line-height: 2;
+	color: #111;
+}
+.footer .footer-info .footer-moto {
+	font-size: 11px;
+	color: #999;
+	line-height: 2.18;
+}
+/* ===== Default components end ===== */
 /* ===== Custom styles start ======*/
 /* ---Inner start--- */
 .inner {
@@ -214,14 +272,9 @@ blockquote span,
 }
 /* ---Inner end--- */
 /* ---About studio start */
-.default-section.about-studio {
-	border-bottom: 1px solid rgba(236, 236, 236, 0.08);
+.about-studio .team-wrapper {
+	margin-top: 108px;
 }
-/* .team-wrapper {
-	overflow: hidden;
-	width: 100%;
-	margin-top: 125px;
-} */
 .team-item .team-item-img {
 	position: relative;
 }
@@ -240,21 +293,24 @@ blockquote span,
 .team-item-info.title{
 	color: #777;
 	letter-spacing: .4em;
+	padding: 30px;
 }
 .team-item-info span {
 	display: block;
 }
 .team-item-name {
 	font-weight: 400;
-	margin: 15px 0;
+	margin-bottom: 15px;
 }
 .team-item-role {
 	font-size: 12px;
 }
+.default-section.about-studio {
+	border-bottom: 1px solid rgb(236, 236, 236);
+}
 /* ---About studio end --- */
 
 /* ---Services start ---*/
-
 #tabs-services .tabs-nav {
 	margin-bottom: 80px;
 	padding-top: 45px;
@@ -298,12 +354,16 @@ blockquote span,
 	margin: auto;
 	color: #777;
 }
+#tabs-portfolio .tabs-nav{
+	text-align: center;
+}
 #tabs-portfolio .tabs-nav li {
-	float: left;
-	width: 25%;
+	display: inline-block;
 	margin-top: 85px;
 	margin-bottom: 50px;
-	text-align: center;
+}
+#tabs-portfolio .tabs-nav li+li {
+	margin-left: 68px;
 }
 #tabs-portfolio .tabs-nav li span {
 	font-size: 13px;
@@ -325,16 +385,10 @@ blockquote span,
 #tabs-portfolio .portfolio-item img:hover {
 	filter: grayscale(0);
 }
-
 /* ---Portfolio end */
 /* ---Like-works starts --- */
 .like-works {
 	background-image: url('../img/like-us-bg.jpg');
-	height: 219px;
-}
-.like-works .title.section-title-light {
-	padding-top: 55px;
-	margin-bottom: 25px; 
 }
 /* ---Like-works end --- */
 
@@ -352,6 +406,162 @@ blockquote span,
 	margin-bottom: 15px;
 }
 /* ---Why choose us end--- */
-/* ---Latest news start---- */
-/* ---Latest news end---- */
+/* ---Reviews carousel --- */
+.reviews-carousel {
+	padding: 135px 0;
+	overflow: hidden;
+}
+.reviews-carousel .slide-content {
+	width: 760px;
+	margin: auto;
+}
+.reviews-carousel .slide-content .icon-quote {
+	margin-bottom: 23px;
+	color: #fff;
+}
+.reviews-carousel .slide-content p {
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 1.6;
+	color: rgba(255, 255, 255, .75);
+}
+	.reviews-carousel .slide-content .review-author {
+	font-size: 11px;
+	line-height: 3.5;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, .3)
+}
+.slick-dots {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 30px;
+}
+.slick-dots li {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	background-color: rgba(255, 255, 255, .8);
+	border: 1px solid #000;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.slick-dots li button {
+	display: none;
+}
+.slick-dots li+li {
+	margin-left: 5px;
+}
+.slick-dots li.slick-active {
+	background-color: #000;
+	border-color: rgba(255, 255, 255, .8);
+}
+.slick-arrow {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	width: 90px;
+	z-index: 1;
+	cursor: pointer;
+}
+.slick-arrow.slick-prev {
+	left: 0;
+}
+.slick-arrow.slick-next {
+	right: 0;
+}
+.slick-arrow .carousel-button {
+	width: 63px;
+	height: 63px;
+	background-color: #fff;
+	transform: rotate(45deg);
+	position: absolute;
+	top: 50%;
+	margin-left: -32px;
+	margin-top: -31px;
+	border-radius: 3px;
+}
+.slick-arrow.slick-next .carousel-button {
+	right: 0;
+	margin-right: -32px;
+}
+.slick-arrow .carousel-button i {
+	position: absolute;
+	transform: rotate(-45deg);
+	font-size: 10px;
+}
+.slick-arrow.slick-prev .carousel-button .fa {
+	bottom: 40px;
+	right: 14px;
+}
+.slick-arrow.slick-next .carousel-button .fa {
+	top: 40px;
+	left: 14px;
+}
+/* --- Reviews carousel --- */
+/* --- Latest news start ---- */
+.latest-news .news-more {
+	float: right;
+	margin-top: 12px;
+	font-size: 11px;
+	letter-spacing: 0.4em;
+	text-transform: uppercase;
+	color: #999;
+}
+.latest-news .news-item img {
+	filter: grayscale(93%);
+	width: 100%;
+}
+.latest-news .news-item img:hover {
+	filter: grayscale(0);
+}
+.latest-news .news-item-info {
+	padding: 30px 0;
+}
+.latest-news .news-item-info span {
+	display: block;
+}
+.latest-news .news-item-info .news-item-title {
+	font-weight: 400;
+	font-size: 15px;
+	letter-spacing: .2em;
+	color: #777;
+	margin-bottom: 17px;
+}
+.latest-news .news-item-info .news-item-author {
+	font-weight: 400;
+	font-size: 11px;
+	letter-spacing: .4em;
+	color: #999;
+	margin-bottom: 30px;
+}
+.latest-news .news-item-info p {
+	line-height: 1.733;
+}
+/* --- Latest news end ---- */
+/* --- Contacts start--- */
+.contact-item .contact-item-content {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 15px;
+}
+.contact-item .contact-item-content span {
+	display: block;
+}
+.contact-item .contact-item-content .contact-title {
+	font-family: 'dosis';
+	font-weight: 300;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	color: #777;
+}
+.contact-item .contact-item-content .contact-data {
+	font-family: 'open sans'; 
+	font-weight: 300;
+	line-height: 1.73;
+	color: #444;
+}
+/* --- Contacts end--- */
 /* ===== Custom styles end ======*/
