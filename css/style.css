@@ -89,7 +89,7 @@ blockquote {
 
 .header {
 	padding: 27px 0;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	z-index: 99;
 	width: 100%;
@@ -290,6 +290,14 @@ textarea.form-control {
 	color: #999;
 	line-height: 2.18;
 }
+.arrow-up {
+	font-size: 50px;
+	color: #c6c6c6;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	cursor: pointer;
+}
 /* ===== Default components end ===== */
 /* ===== Guide style start ===== */
 .guide-section form .form-control {
@@ -345,9 +353,66 @@ textarea.form-control {
 	height: 100%;
 	background-color: #000;
 	transition: all .2s linear;
+	padding: 40px;
 }
 .team-item .team-item-img:hover .team-item-skills {
 	opacity: 1;
+}
+.team-item-skills span {
+	font-size: 18px;
+	font-weight: 400;
+	letter-spacing: 0.3em;
+	/* line-height: 2.1111; */
+}
+.team-item-skills p {
+	color: rgba(255, 255, 255, .5);
+	font-size: 13px;
+	line-height: 1.6154;
+	margin-bottom: 40px;
+	margin-top: 30px;
+}
+.team-item-skills .skill-item .skill-name {
+font-size: 11px;
+color: rgba(255, 255, 255, .9);
+letter-spacing: 0.2em;
+text-transform: uppercase;
+}
+.progress-wrapp {
+	width: 100%;
+	height: 12px;
+	background-color: rgba(255, 255, 255, .15);
+	overflow: hidden;
+	margin-bottom: 20px;
+	margin-top: 7px;
+}
+.progress-wrapp .progress {
+	background-color: rgba(255, 255, 255, .75);
+	height: 12px;
+	width: 0%;
+}
+.progress-wrapp .progress.branding {
+	transition: width .5s ease-out;
+}
+.progress-wrapp .progress.design {
+	transition: width .5s ease-out .2s;
+}
+.progress-wrapp .progress.development {
+	transition: width .5s ease-out .4s;
+}
+.progress-wrapp .progress.photography {
+	transition: width .5s ease-out .6s;
+}
+.team-item .team-item-img:hover .progress.branding {
+	width: 80%;
+}
+.team-item .team-item-img:hover .progress.design {
+	width: 50%;
+}
+.team-item .team-item-img:hover .progress.development {
+	width: 70%;
+}
+.team-item .team-item-img:hover .progress.photography {
+	width: 90%;
 }
 .team-item-info.title{
 	color: #777;
@@ -673,8 +738,15 @@ form button {
 .map-container:hover .on-map-block {
 	display: none;
 }
+.on-map-block::before {
+	display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+	content: "";
+}
 .map-info {
-	padding: 166px 0;
+	display: inline-block;
+	vertical-align: middle;
 }
 .map-info .rhomb-icon {
 	background-color: #fff;
@@ -692,6 +764,7 @@ form button {
 }
 .map-info .map-title-wrapper i {
 	font-size: 11px;
+	
 }
 
 /* --- Map end ---*/
