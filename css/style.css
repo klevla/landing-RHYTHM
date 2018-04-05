@@ -87,13 +87,14 @@ blockquote {
 /* ===== Default components start ===== */
 /* container, text, title, section, small section, button, header, footer, form elements, icons, tabs, block quote */
 
+/* --- Header start --- */
 .header {
 	padding: 27px 0;
 	position: absolute;
 	top: 0;
 	z-index: 99;
 	width: 100%;
-	overflow: hidden;
+	/* overflow: hidden; */
 	text-transform: uppercase;
 	color: #fff;
 }
@@ -113,11 +114,34 @@ blockquote {
 .header .header-nav li + li {
     margin-left: 35px;
 }
+.slicknav_menu {
+	display: none;
+}
+@media (max-width: 767px) {
+	.slicknav_menu {
+		display: block;
+	}
+	.header-nav {
+		display: none;
+	}
+}
+/* --- Header end --- */
+
 .default-section {
 	padding: 135px 0;
 }
+@media (max-width: 991px) {
+	.default-section {
+		padding: 90px 0;
+	}
+}
 .small-section {
 	padding: 70px 0;
+}
+@media (max-width: 991px) {
+	.small-section {
+		padding: 50px 0;
+	}
 }
 .container {
 	max-width: 1200px;
@@ -162,6 +186,11 @@ blockquote span,
 	font-size: 11px;
 	text-transform: uppercase;
 	letter-spacing: .2em;
+}
+@media (max-width: 991px) {
+	blockquote {
+		margin-bottom: 30px;
+	}
 }
 .btn {
 	display: inline-block;
@@ -235,7 +264,7 @@ textarea.form-control {
 .icon {
 	font-size: 48px;
 	color: #111;
-	margin-bottom: 35px;
+	/* margin-bottom: 35px; */
 }
 .rhomb-icon {
 	display: inline-block;
@@ -305,7 +334,7 @@ textarea.form-control {
 }
 /* ===== Guide style end ===== */
 /* ===== Custom styles start ======*/
-/* ---Inner start--- */
+/* --- Inner start --- */
 .inner {
     background-image: url('../img/inner-bcg.jpg');
     background-position: center;
@@ -336,6 +365,30 @@ textarea.form-control {
 .inner span {
 	font-size: 19px;
 	color: rgba(255, 255, 255, .68);
+}
+.inner .rhomb-icon {
+	display: block;
+	position: relative;
+	bottom: 36px;
+	display: block;
+    left: 50%;
+	background-color: #fff;
+	color: #222;
+	font-size: 15px;
+	cursor: pointer;
+}
+@media (max-width: 991px) {
+	.inner-content h1 {
+		letter-spacing: .7em;
+		text-indent: .7em;
+		margin-bottom: 50px;
+	}	
+}
+@media (max-width:767px) {
+	.inner {
+		height: auto;
+		padding: 150px 0;
+	}
 }
 /* ---Inner end--- */
 /* ---About studio start */
@@ -432,6 +485,19 @@ text-transform: uppercase;
 .default-section.about-studio {
 	border-bottom: 1px solid rgb(236, 236, 236);
 }
+@media (max-width: 991px) {
+	.team-item-name {
+		font-size: 12px;
+	}
+	.team-item-role {
+		font-size: 9px;
+	}
+}
+@media (max-width: 767px) {
+	.team-item-img img {
+		width: 100%;
+	}
+}
 /* ---About studio end --- */
 
 /* ---Services start ---*/
@@ -449,9 +515,21 @@ text-transform: uppercase;
 	display: block;
 	line-height: 1;
 	color: rgba(17, 17, 17, .5);
+	margin-bottom: 35px;
 }
 #tabs-services .tabs-nav .ui-state-active span {
 	color: rgb(17, 17, 17);
+}
+@media (max-width: 991px) {
+	#tabs-services .tabs-nav {
+		margin-bottom: 50px;
+		padding-top: 0;
+	}
+}
+@media (max-width: 767px) {
+	#tabs-services .tabs-nav li {
+		width: 33.333%
+	}
 }
 /* ---Services end ---*/
 /* ---Lets-talk start--- */
@@ -464,6 +542,12 @@ text-transform: uppercase;
 }
 .lets-talk .lets-talk-img {
 	margin-top: -33px;
+}
+@media (max-width: 991px) {
+	.lets-talk-content {
+		text-align: center;
+		padding: 70px 0;
+	}
 }
 /* ---Lets-talk end--- */
 /* ---Portfolio start */
@@ -509,25 +593,59 @@ text-transform: uppercase;
 #tabs-portfolio .portfolio-item img:hover {
 	filter: grayscale(0);
 }
-/* ---Portfolio end */
-/* ---Like-works starts --- */
+@media (max-width: 991px) {
+	#tabs-portfolio .portfolio-item {
+		width: 50%;
+	}
+}
+@media (max-width:767px) {
+	#tabs-portfolio {
+		margin: 30px 0;
+	}
+	#tabs-portfolio .tabs-nav li {
+		display: block;
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+	#tabs-portfolio .tabs-nav li + li {
+		margin-left: 0;
+	}
+	#tabs-portfolio .portfolio-item {
+		width: 100%;
+	}
+}
+/* --- Portfolio end --- */
+/* --- Like-works start --- */
 .like-works {
 	background-image: url('../img/like-us-bg.jpg');
 }
 /* ---Like-works end --- */
 
-/* ---Why choose us--- */
+/* --- Why choose us start --- */
 .why-choose-us .row + .row {
 	margin-top: 85px;
 }
 .why-icon {
 	margin-top: 15px;
+	margin-bottom: 35px;
 }
 .why-item-title {
 	font-size: 14px;
 	letter-spacing: .4em;
 	font-weight: 400;
 	margin-bottom: 15px;
+}
+@media (max-width: 991px) {
+	.why-choose-us {
+		text-align: center;
+	}
+	.why-icon {
+		margin-top: 30px;
+		margin-bottom: 15px;
+	}
+	.why-choose-us .row + .row {
+		margin-top: 0;
+	}
 }
 /* ---Why choose us end--- */
 /* ---Reviews carousel --- */
@@ -623,6 +741,11 @@ text-transform: uppercase;
 	top: 40px;
 	left: 14px;
 }
+@media (max-width: 991px) {
+	.reviews-carousel .slide-content p {
+		padding: 0px 45px;
+	}
+}
 /* --- Reviews carousel --- */
 /* --- Latest news start ---- */
 .latest-news .news-more {
@@ -663,10 +786,16 @@ text-transform: uppercase;
 .latest-news .news-item-info p {
 	line-height: 1.733;
 }
+@media (max-width: 991px) {
+	.latest-news .news-item {
+		margin-bottom: 50px;
+	}
+}
 /* --- Latest news end --- */
 /* --- Subscribe --- */
 .subscribe form .form-control {
 	max-width: 290px;
+	height: 38px;
 }
 .subscribe .form-info {
 	margin-top: 17px;
@@ -675,6 +804,9 @@ text-transform: uppercase;
 /* --- Contacts start--- */
 .contact-items-wrapper {
 	margin-bottom: 80px;
+}
+.contact-item-icon {
+    margin-left: 3px;
 }
 .contact-item .contact-item-content {
 	display: inline-block;
@@ -700,7 +832,6 @@ text-transform: uppercase;
 }
 .contact-form {
 	overflow: hidden;
-	margin: 0 -5px;
 }
 .contact-form .form-col {
 	float: left;
@@ -710,14 +841,14 @@ text-transform: uppercase;
 .contact-form .form-control + .form-control {
 	margin-top: 10px;
 }
-form .form-info {
-	line-height: 40px;
-	padding-left: 5px;
-    margin-top: 22px;
+form .form-row {
+	margin: 0 -5px;
+	overflow: hidden;
 }
-form button {
-	margin-right: 5px;
-    margin-top: 22px;
+form .form-submit {
+	overflow: hidden;
+	margin-top: 20px;
+	line-height: 40px;
 }
 /* --- Contacts end --- */
 /* --- Map start ---*/
@@ -764,8 +895,6 @@ form button {
 }
 .map-info .map-title-wrapper i {
 	font-size: 11px;
-	
 }
-
 /* --- Map end ---*/
 /* ===== Custom styles end ======*/
