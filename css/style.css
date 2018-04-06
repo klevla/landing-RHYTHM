@@ -389,6 +389,15 @@ textarea.form-control {
 		height: auto;
 		padding: 150px 0;
 	}
+	.inner .rhomb-icon {
+		display: none;
+	}
+}
+@media (max-width:576px) {
+	.inner-content h1 {
+		letter-spacing: .3em;
+		text-indent: .0em;
+	}
 }
 /* ---Inner end--- */
 /* ---About studio start */
@@ -746,6 +755,18 @@ text-transform: uppercase;
 		padding: 0px 45px;
 	}
 }
+@media (max-width:767px) {
+	.reviews-carousel {
+		padding: 70px 0;
+	}
+	.reviews-carousel .slide-content {
+		width: 100%;
+	}
+	.reviews-carousel .slide-content p {
+		font-size: 15px;
+		padding: 0px 65px;
+	}
+}
 /* --- Reviews carousel --- */
 /* --- Latest news start ---- */
 .latest-news .news-more {
@@ -791,6 +812,11 @@ text-transform: uppercase;
 		margin-bottom: 50px;
 	}
 }
+@media (max-width:576px) {
+	.latest-news .news-more {
+		float: left;
+	}
+}
 /* --- Latest news end --- */
 /* --- Subscribe --- */
 .subscribe form .form-control {
@@ -799,6 +825,14 @@ text-transform: uppercase;
 }
 .subscribe .form-info {
 	margin-top: 17px;
+}
+@media (max-width:576px) {
+	.subscribe form .form-control {
+		margin-bottom: 15px;
+	}
+	.subscribe button {
+		width: 100%;
+	}
 }
 /* --- Subscribe end --- */
 /* --- Contacts start--- */
@@ -850,6 +884,28 @@ form .form-submit {
 	margin-top: 20px;
 	line-height: 40px;
 }
+@media (max-width: 767px) {
+	.contact-form .form-col {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.contact-item {
+		text-align: center;
+	}
+	.contact-item .contact-item-content {
+		margin-top: 15px;
+		display: block;
+		margin-left: 0;
+	}
+}
+@media (max-width:576px) {
+	.contacts .contact-item + .contact-item {
+		margin-top: 20px;
+	}
+	.contacts form button {
+		width: 100%;
+	}
+} 
 /* --- Contacts end --- */
 /* --- Map start ---*/
 #map {
