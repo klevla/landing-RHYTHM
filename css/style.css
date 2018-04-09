@@ -89,14 +89,11 @@ blockquote {
 
 /* --- Header start --- */
 .header {
-	padding: 27px 0;
+	padding: 25px 0;
 	position: absolute;
 	top: 0;
 	z-index: 99;
 	width: 100%;
-	/* overflow: hidden; */
-	text-transform: uppercase;
-	color: #fff;
 }
 .header .logo {
     float: left;
@@ -109,7 +106,9 @@ blockquote {
 	line-height: 21px;
 	font-size: 11px;
 	letter-spacing: .3em;
+	text-transform: uppercase;
 	color: rgba(255, 255, 255, .75);
+	font-weight: 400;
 }
 .header .header-nav li + li {
     margin-left: 35px;
@@ -165,10 +164,15 @@ blockquote {
 	letter-spacing: .5em;
 	margin-bottom: 75px;
 }
+@media (max-width:576px) {
+	margin-bottom: 50px;
+}
 .title.section-title-light {
+	font-size: 18px;
 	font-weight: 300;
 	letter-spacing: .3em;
 	margin-bottom: 20px;
+	line-height: 1.44;
 }
 .default-text {
 	font-size: 15px;
@@ -186,6 +190,8 @@ blockquote span,
 	font-size: 11px;
 	text-transform: uppercase;
 	letter-spacing: .2em;
+	line-height: 3.5;
+	font-weight: 400;
 }
 @media (max-width: 991px) {
 	blockquote {
@@ -196,7 +202,7 @@ blockquote span,
 	display: inline-block;
 	padding: 12px 20px;
 	border-radius: 2px;
-	font-size: 12px;
+	font-size: 13px;
 	text-transform: uppercase;
 	font-weight: 400;
 	letter-spacing: .2em;
@@ -206,14 +212,14 @@ blockquote span,
 	opacity: .6;
 }
 .btn.btn-default {
-	background-color: #e5e5e5;
-	color: #777;
+	background-color: rgba(207, 207, 207, .8);
+	color: #111;
 }
 .btn.btn-default:hover {
 	background-color: #d1d0d0;
 }
 .btn.btn-black {
-	background-color: #323232;
+	background-color: rgba(50, 50, 50, .8);
 	color: #fff;
 }
 .btn.btn-black:hover {
@@ -222,6 +228,7 @@ blockquote span,
 .btn.btn-xs {
 	padding: 7px 15px;
 	font-size: 11px;
+	line-height: 2.36em;
 }
 .form-control {
 	width: 100%;
@@ -360,16 +367,17 @@ textarea.form-control {
 	text-indent: 1.7em;
 	font-size: 30px;
 	margin-bottom: 100px;
-	color: rgba(255, 255, 255, .9);
+	color: rgba(254, 254, 254, .9);
+	font-weight: 400;
 }
 .inner span {
 	font-size: 19px;
-	color: rgba(255, 255, 255, .68);
+	color: rgba(254, 254, 254, .68);
 }
 .inner .rhomb-icon {
 	display: block;
 	position: relative;
-	bottom: 36px;
+	bottom: 62px;
 	display: block;
     left: 50%;
 	background-color: #fff;
@@ -402,7 +410,7 @@ textarea.form-control {
 /* ---Inner end--- */
 /* ---About studio start */
 .about-studio .team-wrapper {
-	margin-top: 108px;
+	margin-top: 93px;
 }
 .team-item .team-item-img {
 	position: relative;
@@ -479,7 +487,7 @@ text-transform: uppercase;
 .team-item-info.title{
 	color: #777;
 	letter-spacing: .4em;
-	padding: 30px;
+	padding-top: 30px;
 }
 .team-item-info span {
 	display: block;
@@ -490,6 +498,7 @@ text-transform: uppercase;
 }
 .team-item-role {
 	font-size: 12px;
+	font-weight: 400;
 }
 .default-section.about-studio {
 	border-bottom: 1px solid rgb(236, 236, 236);
@@ -510,8 +519,11 @@ text-transform: uppercase;
 /* ---About studio end --- */
 
 /* ---Services start ---*/
+#tabs-services {
+	margin-bottom: 20px;
+}
 #tabs-services .tabs-nav {
-	margin-bottom: 80px;
+	margin-bottom: 32px;
 	padding-top: 45px;
 	overflow: hidden;
 }
@@ -525,6 +537,11 @@ text-transform: uppercase;
 	line-height: 1;
 	color: rgba(17, 17, 17, .5);
 	margin-bottom: 35px;
+}
+.tabs-nav li span.title{
+	font-size: 14px;
+	letter-spacing: 0.4em;
+	font-weight: 400;
 }
 #tabs-services .tabs-nav .ui-state-active span {
 	color: rgb(17, 17, 17);
@@ -549,6 +566,11 @@ text-transform: uppercase;
 	color: rgba(255, 255, 255, .7);
 	margin-bottom: 35px;
 }
+.lets-talk-content .btn {
+	font-size: 14px;
+	line-height: 1.86em;
+}
+
 .lets-talk .lets-talk-img {
 	margin-top: -33px;
 }
@@ -626,7 +648,11 @@ text-transform: uppercase;
 /* --- Portfolio end --- */
 /* --- Like-works start --- */
 .like-works {
-	background-image: url('../img/like-us-bg.jpg');
+	background-color: #111;
+}
+.like-works .btn {
+	font-size: 14px;
+	line-height: 1.86em;
 }
 /* ---Like-works end --- */
 
@@ -659,7 +685,7 @@ text-transform: uppercase;
 /* ---Why choose us end--- */
 /* ---Reviews carousel --- */
 .reviews-carousel {
-	padding: 135px 0;
+	padding: 140px 0;
 	overflow: hidden;
 }
 .reviews-carousel .slide-content {
@@ -807,6 +833,10 @@ text-transform: uppercase;
 .latest-news .news-item-info p {
 	line-height: 1.733;
 }
+.latest-news .btn {
+	color: #777;
+}
+
 @media (max-width: 991px) {
 	.latest-news .news-item {
 		margin-bottom: 50px;
@@ -821,7 +851,7 @@ text-transform: uppercase;
 /* --- Subscribe --- */
 .subscribe form .form-control {
 	max-width: 290px;
-	height: 38px;
+	height: 40px;
 }
 .subscribe .form-info {
 	margin-top: 17px;
@@ -835,7 +865,7 @@ text-transform: uppercase;
 	}
 }
 /* --- Subscribe end --- */
-/* --- Contacts start--- */
+/* --- Contact start--- */
 .contact-items-wrapper {
 	margin-bottom: 80px;
 }
@@ -852,10 +882,10 @@ text-transform: uppercase;
 }
 .contact-item .contact-item-content .contact-title {
 	font-family: 'dosis';
-	font-weight: 300;
+	font-weight: 400;
 	font-size: 12px;
 	text-transform: uppercase;
-	letter-spacing: .2em;
+	letter-spacing: .3em;
 	color: #777;
 }
 .contact-item .contact-item-content .contact-data {
